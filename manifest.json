@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "ext_demo",
+    "version": "1",
+    "description": "demo",
+    "author": "Appani Kaushik",
+    "icons": {
+      "128": "images/4.png"
+    },
+    "browser_action": {
+      "default_icon": "images/4.png",
+      "default_title": "linkmark",
+      "default_popup": "main.html"
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs",
+      "unlimitedStorage",
+      "contextMenus",
+      "notifications"
+    ],
+    "content_scripts": [
+      {
+        "matches":["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
